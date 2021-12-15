@@ -6,7 +6,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "Requirements Engineering Friend Tracker",
+            "title": "Aufgabe 12_Besnik Shala",
             "formList": [
                 {
                     "id": "FriendForm",
@@ -27,6 +27,7 @@ export class GuiModel {
                             "width": 1,
                             "required": true
                         },
+                        { "id": "nickname", "type": "text", "name": "Nickname", "width": 2, "required": true },
                         {
                             "id":   "location",
                             "type": "autocomplete",
@@ -131,6 +132,14 @@ export class GuiModel {
                             "color": "blue",
                             "page": "friendspage",
                         },
+                        { 
+                            "type": "button", 
+                            "name": "Groups", 
+                            "icon": "fa-weixin", 
+                            "color": "wisteria", 
+                            "page": "groupspage", 
+                            }, 
+                            
                         {
                             "type": "button",
                             "name": "Location",
@@ -167,6 +176,27 @@ export class GuiModel {
                         },
                     ]
                 },
+                { 
+                    "id": "groupspage", 
+                    "elementList": [ 
+                    { 
+                    "type": "backbutton", 
+                    }, 
+                    { 
+                    "type": "newButton", 
+                    "name": "NewGroup", 
+                    "icon": "fa-weixin", 
+                    "color": "green", 
+                    "form": { 
+                    "form": "GroupForm" 
+                    } 
+                    } 
+                    ] 
+                    }, 
+                     
+                
+                
+                
                 {
                     "id": "locationspage",
                     "elementList": [
