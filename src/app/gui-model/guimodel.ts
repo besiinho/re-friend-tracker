@@ -27,6 +27,15 @@ export class GuiModel {
                             "width": 1,
                             "required": true
                         },
+                        { 
+                            "id": "group", 
+                            "type": "autocomplete", 
+                            "name": "Group", 
+                            "url": "/group", 
+                            "form": "GroupForm", 
+                            "width": 2 
+                            }, 
+                            
                         { "id": "nickname", "type": "text", "name": "Nickname", "width": 2, "required": true },
                         {
                             "id":   "location",
@@ -64,6 +73,33 @@ export class GuiModel {
                         }
                     ]
                 },
+                { 
+                    "id": "GroupForm", 
+                    "title": "Group", 
+                    "url": "/group", 
+                    "formFieldList": [ 
+                    { 
+                    "id": "name", 
+                    "type": "text", 
+                    "name": "GroupName", 
+                    "width": 2, 
+                    "required": true 
+                    }, 
+                    { 
+                    "type": "deleteButton", 
+                    "name": "Delete" 
+                    }, 
+                    { 
+                    "type": "cancelButton", 
+                    "name": "Cancel" 
+                    }, 
+                    { 
+                    "type": "okButton", 
+                    "name": "Ok" 
+                    } 
+                    ] 
+                    }, 
+                    
                 {
                     "id": "LocationForm",
                     "title": "Location",
@@ -181,7 +217,18 @@ export class GuiModel {
                     "elementList": [ 
                     { 
                     "type": "backbutton", 
-                    }, 
+                    },
+                    { 
+                        "type": "list", 
+                        "icon": "fa-weixin", 
+                        "color": "wisteria", 
+                        "search": true, 
+                        "url": "/group", 
+                        "form": { 
+                        "form": "GroupForm" 
+                        } 
+                        }, 
+                         
                     { 
                     "type": "newButton", 
                     "name": "NewGroup", 
