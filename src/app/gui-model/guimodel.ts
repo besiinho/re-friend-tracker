@@ -21,11 +21,11 @@ export class GuiModel {
                             "required": true
                         },
                         {
-                            "id":   "activity",
+                            "id":   "location",
                             "type": "autocomplete",
-                            "name": "activity",
-                            "url": "/activity",
-                            "form": "ActivityForm",
+                            "name": "location",
+                            "url": "/location",
+                            "form": "LocationForm",
                             "width": 2
                         },
                         {
@@ -300,6 +300,17 @@ export class GuiModel {
                             "color": "green",
                             "search": true,
                             "url": "/friend/:friendKey/activity",
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/friend/:friendKey/activity",
+                            
                             "form": {
                                 "form": "AddActivityForm"
                             }
