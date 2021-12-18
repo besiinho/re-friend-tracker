@@ -215,6 +215,39 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "AddFriendForm",
+                    "title": "Friend",
+                    "url": "/activity/:activityKey/friend",
+                    "formFieldList": [
+                        {
+                            "id":   "Friend",
+                            "type": "autocomplete",
+                            "name": "Friend",
+                            "url": "/friend",
+                            "defaultKey": "friendKey",
+                            "readonly": true,
+                            "form": "friendForm",
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },    
+
+
+
+
             ],
             "pageList": [
                 {
@@ -339,12 +372,54 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/activity",
+                            "page": "activityypage"
+                        },
+                            
+
+                    ]
+                },
+                {
+                    "id": "activityypage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "EditActivity",
+                            "icon": "fa-user",
+                            "color": "green",
                             "form": {
                                 "form": "ActivityForm"
                             }
                         },
+
+                        {
+                            "type": "newButton",
+                            "name": "AddFriend",
+                            "icon": "fa-user",
+                            "color": "green",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend",
+                            "form": {
+                                "form": "AddFriendForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend",
+                            "form": {
+                                "form": "AddFriendForm"
+                            }
+                        },
+                            
+
                     ]
                 },
+                
                 { 
                     "id": "groupspage", 
                     "elementList": [ 
