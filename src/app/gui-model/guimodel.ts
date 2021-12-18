@@ -21,9 +21,9 @@ export class GuiModel {
                             "required": true
                         },
                         {
-                            "id":   "location",
+                            "id":   "Location",
                             "type": "autocomplete",
-                            "name": "location",
+                            "name": "Location",
                             "url": "/location",
                             "form": "LocationForm",
                             "width": 2
@@ -45,14 +45,7 @@ export class GuiModel {
                             }, 
                             
                         { "id": "nickname", "type": "text", "name": "Nickname", "width": 2, "required": true },
-                        {
-                            "id":   "location",
-                            "type": "autocomplete",
-                            "name": "Location",
-                            "url": "/location",
-                            "form": "LocationForm",
-                            "width": 2
-                        },
+                        
                         {
                             "id": "birthdate",
                             "type": "date",
